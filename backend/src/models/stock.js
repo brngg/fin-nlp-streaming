@@ -18,11 +18,9 @@ async function insertData() {
 
     try {
         await sender
-
             .table('trades')
             .symbol('symbol', 'digger')
             .atNow();
-
         await sender.flush() 
     } catch (err) {
         console.error("Error inserting", error);
